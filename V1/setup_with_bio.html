@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Atheneum | Professional Experience Setup</title>
+<!-- Google Fonts: Manrope & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#31332c",
+                    "tertiary-container": "#ddddfe",
+                    "surface-bright": "#fbf9f4",
+                    "on-primary-fixed-variant": "#4f5c71",
+                    "secondary-container": "#c9e7f7",
+                    "on-primary": "#f6f7ff",
+                    "on-error-container": "#752121",
+                    "primary-container": "#d6e3fc",
+                    "primary": "#525f74",
+                    "secondary-dim": "#3a5764",
+                    "inverse-surface": "#0e0e0c",
+                    "inverse-primary": "#d9e6ff",
+                    "on-tertiary": "#fbf8ff",
+                    "secondary-fixed-dim": "#bbd9e9",
+                    "surface-container-highest": "#e2e3d9",
+                    "inverse-on-surface": "#9e9d99",
+                    "surface-container-low": "#f5f4ed",
+                    "on-secondary": "#f3faff",
+                    "on-primary-fixed": "#334053",
+                    "surface": "#fbf9f4",
+                    "error-dim": "#4e0309",
+                    "on-error": "#fff7f6",
+                    "secondary": "#466370",
+                    "outline": "#797c73",
+                    "outline-variant": "#b1b3a9",
+                    "on-background": "#31332c",
+                    "on-secondary-fixed": "#264350",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed": "#ddddfe",
+                    "surface-dim": "#d9dbcf",
+                    "surface-variant": "#e2e3d9",
+                    "primary-fixed-dim": "#c8d5ed",
+                    "secondary-fixed": "#c9e7f7",
+                    "tertiary": "#5b5d78",
+                    "surface-container-high": "#e8e9e0",
+                    "tertiary-fixed-dim": "#cecfef",
+                    "on-tertiary-fixed": "#3a3c55",
+                    "error-container": "#fe8983",
+                    "on-tertiary-container": "#4c4e68",
+                    "tertiary-dim": "#4f516c",
+                    "on-tertiary-fixed-variant": "#565873",
+                    "surface-container": "#efeee6",
+                    "primary-dim": "#465367",
+                    "on-surface-variant": "#5e6058",
+                    "primary-fixed": "#d6e3fc",
+                    "error": "#9f403d",
+                    "on-secondary-fixed-variant": "#435f6d",
+                    "surface-tint": "#525f74",
+                    "on-secondary-container": "#395663",
+                    "background": "#fbf9f4",
+                    "on-primary-container": "#455266"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": [
+                            "Manrope"
+                    ],
+                    "body": [
+                            "Inter"
+                    ],
+                    "label": [
+                            "Inter"
+                    ]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fbf9f4;
+            color: #31332c;
+        }
+        h1, h2, h3 {
+            font-family: 'Manrope', sans-serif;
+        }
+        /* Custom scrollbar for Ivory Gallery */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #fbf9f4; }
+        ::-webkit-scrollbar-thumb { background: #e2e3d9; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-background min-h-screen flex flex-col items-center justify-center py-20 px-6">
+<!-- Progress Indicator -->
+<div class="mb-12 flex items-center space-x-4">
+<div class="w-2 h-2 rounded-full bg-primary/20"></div>
+<div class="w-12 h-1 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-primary/20"></div>
+</div>
+<!-- Main Content Shell -->
+<main class="w-full max-w-2xl bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-[0_40px_100px_rgba(49,51,44,0.04)] relative">
+<!-- Header Section -->
+<header class="mb-10 text-center md:text-left">
+<h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-on-surface mb-3">
+                Build Your Career Profile
+            </h1>
+<p class="text-on-surface-variant text-lg max-w-md leading-relaxed">
+                Help mentors and students understand your journey and areas of expertise.
+            </p>
+</header>
+<!-- Form Section -->
+<form class="space-y-10">
+<!-- Current Status -->
+<div class="grid grid-cols-1 gap-6">
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface uppercase tracking-wider">Current Role</label>
+<input class="w-full h-14 px-4 bg-surface-container-highest border-0 focus:ring-2 focus:ring-primary/20 rounded-lg text-on-surface placeholder:text-outline-variant transition-all" placeholder="e.g. Senior Product Designer" type="text"/>
+</div>
+<div class="space-y-4">
+<label class="block text-sm font-semibold text-on-surface uppercase tracking-wider">Skills &amp; Expertise</label>
+<div class="flex flex-wrap gap-2 mb-3">
+<span class="inline-flex items-center px-4 py-2 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold">
+                            UI/UX Design
+                            <button class="ml-2 hover:text-error transition-colors" type="button"><span class="material-symbols-outlined text-sm">close</span></button>
+</span>
+<span class="inline-flex items-center px-4 py-2 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold">
+                            Strategy
+                            <button class="ml-2 hover:text-error transition-colors" type="button"><span class="material-symbols-outlined text-sm">close</span></button>
+</span>
+<span class="inline-flex items-center px-4 py-2 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold">
+                            Leadership
+                            <button class="ml-2 hover:text-error transition-colors" type="button"><span class="material-symbols-outlined text-sm">close</span></button>
+</span>
+</div>
+<div class="relative">
+<input class="w-full h-14 px-4 bg-surface-container-highest border-0 focus:ring-2 focus:ring-primary/20 rounded-lg text-on-surface placeholder:text-outline-variant transition-all" placeholder="Add a skill (Press Enter)" type="text"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 text-outline-variant">
+<span class="material-symbols-outlined">add_circle</span>
+</div>
+</div>
+</div><div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface uppercase tracking-wider">About Me</label>
+<textarea class="w-full min-h-[120px] p-4 bg-surface-container-highest border-0 focus:ring-2 focus:ring-primary/20 rounded-lg text-on-surface placeholder:text-outline-variant transition-all resize-none" placeholder="Briefly describe your background and unique perspective..."></textarea>
+</div>
+</div>
+<!-- Professional History Section -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="text-xl font-bold text-on-surface">Professional History</h2>
+</div>
+<!-- Repeatable Experience Cards -->
+<div class="space-y-4">
+<!-- Item 1 (Existing) -->
+<div class="group relative bg-surface-container-low p-6 rounded-lg transition-all hover:bg-surface-container-high border-l-4 border-primary/20 hover:border-primary">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Company Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface font-medium px-0 pb-1" type="text" value="Design Systems Inc."/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Role</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface font-medium px-0 pb-1" type="text" value="Lead Visualist"/>
+</div>
+<div class="space-y-2 md:col-span-2">
+<label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Years of Experience</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface font-medium px-0 pb-1" type="text" value="4 Years"/>
+</div>
+</div>
+<button class="absolute top-4 right-4 text-outline-variant hover:text-error opacity-0 group-hover:opacity-100 transition-opacity" type="button">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+<!-- Add Button -->
+<button class="group flex items-center justify-center w-full py-4 border-2 border-dashed border-outline-variant rounded-lg hover:border-primary hover:bg-primary-container/10 transition-all text-on-surface-variant hover:text-primary font-semibold text-sm" type="button">
+<span class="material-symbols-outlined mr-2 group-hover:scale-110 transition-transform">add_circle</span>
+                        Add Another Company
+                    </button>
+</div>
+</section>
+<!-- Final Actions -->
+<footer class="pt-8 flex flex-col md:flex-row gap-4 items-center justify-between border-t border-surface-container-high">
+<p class="text-xs text-on-surface-variant max-w-[240px] text-center md:text-left leading-relaxed">
+                    By continuing, you agree to our terms regarding profile visibility in the gallery.
+                </p>
+<button class="w-full md:w-auto px-10 py-4 bg-primary text-on-primary rounded-lg font-bold shadow-lg shadow-primary/20 hover:bg-primary-dim hover:translate-y-[-2px] active:translate-y-0 transition-all" type="submit">
+                    Save &amp; Continue
+                </button>
+</footer>
+</form>
+</main>
+<!-- Visual Accents -->
+<aside class="fixed bottom-10 right-10 hidden xl:block opacity-40">
+<div class="flex flex-col space-y-4">
+<div class="w-32 h-1 bg-primary/20 rounded-full"></div>
+<div class="w-24 h-1 bg-primary/10 rounded-full ml-auto"></div>
+</div>
+</aside>
+<aside class="fixed top-10 left-10 hidden xl:block">
+<div class="p-6 rounded-xl bg-surface-container-low border border-outline-variant/10">
+<div class="flex items-center space-x-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div>
+<div class="text-xs font-bold text-on-surface uppercase tracking-widest">Verification Status</div>
+<div class="text-sm text-on-surface-variant">Profile Setup In Progress</div>
+</div>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-2/3"></div>
+</div>
+</div>
+</aside>
+</body></html>

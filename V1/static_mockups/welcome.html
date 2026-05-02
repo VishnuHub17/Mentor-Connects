@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Welcome to Atheneum | Mentor Onboarding</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#fbf9f4",
+                    "on-secondary-container": "#395663",
+                    "on-error": "#fff7f6",
+                    "error-container": "#fe8983",
+                    "tertiary": "#5b5d78",
+                    "surface-variant": "#e2e3d9",
+                    "inverse-on-surface": "#9e9d99",
+                    "on-tertiary-fixed": "#3a3c55",
+                    "primary-dim": "#465367",
+                    "on-tertiary-fixed-variant": "#565873",
+                    "on-primary-fixed-variant": "#4f5c71",
+                    "surface-container-high": "#e8e9e0",
+                    "error-dim": "#4e0309",
+                    "surface-container-highest": "#e2e3d9",
+                    "surface-tint": "#525f74",
+                    "outline": "#797c73",
+                    "background": "#fbf9f4",
+                    "outline-variant": "#b1b3a9",
+                    "on-tertiary-container": "#4c4e68",
+                    "inverse-surface": "#0e0e0c",
+                    "on-tertiary": "#fbf8ff",
+                    "on-error-container": "#752121",
+                    "on-secondary": "#f3faff",
+                    "surface-container-low": "#f5f4ed",
+                    "on-primary-fixed": "#334053",
+                    "tertiary-dim": "#4f516c",
+                    "secondary-fixed-dim": "#bbd9e9",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#c9e7f7",
+                    "tertiary-container": "#ddddfe",
+                    "on-secondary-fixed": "#264350",
+                    "primary-fixed": "#d6e3fc",
+                    "primary-container": "#d6e3fc",
+                    "tertiary-fixed": "#ddddfe",
+                    "primary": "#525f74",
+                    "on-primary": "#f6f7ff",
+                    "inverse-primary": "#d9e6ff",
+                    "error": "#9f403d",
+                    "secondary-dim": "#3a5764",
+                    "on-background": "#31332c",
+                    "surface-container": "#efeee6",
+                    "secondary-container": "#c9e7f7",
+                    "tertiary-fixed-dim": "#cecfef",
+                    "on-primary-container": "#455266",
+                    "surface-dim": "#d9dbcf",
+                    "on-surface": "#31332c",
+                    "surface": "#fbf9f4",
+                    "on-surface-variant": "#5e6058",
+                    "primary-fixed-dim": "#c8d5ed",
+                    "secondary": "#466370",
+                    "on-secondary-fixed-variant": "#435f6d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-gradient {
+            background: linear-gradient(135deg, #525f74 0%, #465367 100%);
+        }
+        .ivory-glass {
+            background: rgba(251, 249, 244, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface antialiased">
+<!-- TopNavBar (Suppressed for transactional onboarding focus as per mandate, but keeping structural anchor) -->
+<header class="w-full top-0 left-0 sticky z-50 ivory-glass">
+<div class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="text-lg font-bold tracking-tighter text-[#31332c] font-headline">The Ivory Gallery</div>
+<div class="flex items-center gap-6">
+<span class="text-xs uppercase tracking-widest text-primary font-medium cursor-pointer">Help</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="Support avatar" class="w-full h-full object-cover" data-alt="Professional portrait of a support specialist with a warm expression in a minimalist studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu4BTJ2L38KBzVG6av237veHHNIJWyaQY-WYKevbjH64NCB7EGWUzN2BTMV9EVsJ4FjY77dSHmPpO779fS-cUSoLWIm6I7UaQ_DBJOatJTOwQW1qykkeorjhxV3KYSB8kKmKKoQi-QChmpyCZTF2aMxDzUipLfppogLerHvpFhi17Qv3lsFvR5tmBOci30kJAPsdykfX3p3OAgoYStQZHwiCDDaXOyFPE7QE-dv9iJ07BsWMvvZGPkUeczhfVIIZQ6HfQfvj8GIo5M"/>
+</div>
+</div>
+</div>
+</header>
+<main class="min-h-[calc(100vh-140px)] flex flex-col items-center">
+<!-- Hero Section -->
+<section class="w-full max-w-screen-2xl mx-auto px-8 py-12 md:py-20 flex flex-col items-center text-center">
+<!-- Hero Image Wrapper - Asymmetric Layout Style -->
+<div class="relative w-full max-w-5xl mb-16 group">
+<div class="aspect-[21/9] w-full overflow-hidden rounded-xl bg-surface-container shadow-2xl">
+<img alt="Collaborative Studio" class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" data-alt="Collaborative architectural studio with large windows, natural wood tables, and diverse professionals sharing architectural models and ideas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIErb52n5cAB0eSDrQ9BUs3Uyu7E9sU_bcXNeZ0HLk7vGnH6blyeuOg0d-85d0fE4dzVfEwLvMUtc1GlXJWA1XDQJzJzx9ixrzKyDniLQQb8VIkRY_QDQiDL2CrDnWpISuG5UPh27aGtHTfudwvwnvgIOBmFDQAPXMpnsKXPrWfJyUqolecrwB35DzLDULGsL0JnhWGdLwApdJPFERfSKpvQ35Y3PwFpeprASjEQtlSJV_yxeHppi5e6mJXB_YCH5UqOd37ePlHTk_"/>
+</div>
+<!-- Float Decorative Element -->
+<div class="absolute -bottom-8 -right-8 hidden md:block w-48 h-48 bg-surface-container-low border-[12px] border-background rounded-xl shadow-lg flex items-center justify-center p-6">
+<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'FILL' 1;">architecture</span>
+</div>
+</div>
+<!-- Content Area -->
+<div class="max-w-3xl space-y-8">
+<h1 class="text-4xl md:text-6xl font-extrabold font-headline text-on-surface tracking-tight leading-[1.1]">
+                    Welcome to Atheneum: <span class="text-primary italic font-medium">Elevate the Next Generation</span> of Talent
+                </h1>
+<p class="text-lg md:text-xl text-on-surface-variant font-light leading-relaxed max-w-2xl mx-auto">
+                    Your expertise is the bridge between aspiration and achievement. Start your journey as a mentor and impact careers globally.
+                </p>
+<!-- CTA -->
+<div class="pt-6">
+<button class="editorial-gradient text-on-primary px-10 py-4 rounded-md font-semibold text-lg shadow-xl hover:shadow-2xl hover:translate-y-[-2px] transition-all duration-300 active:opacity-70">
+                        Begin Onboarding
+                    </button>
+</div>
+</div>
+</section>
+<!-- Platform Introduction Grid (Bento Style) -->
+<section class="w-full max-w-screen-2xl mx-auto px-8 pb-32">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Large Feature Card -->
+<div class="md:col-span-7 bg-surface-container-lowest p-10 rounded-xl flex flex-col justify-between min-h-[320px]">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-primary text-3xl">school</span>
+<h3 class="text-2xl font-bold font-headline">The Mentorship Philosophy</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            At Atheneum, we believe knowledge is a shared legacy. Our platform is designed to facilitate high-impact, one-on-one sessions that move beyond theory into professional mastery.
+                        </p>
+</div>
+<div class="mt-8 flex items-center gap-4">
+<div class="h-px flex-grow bg-outline-variant/20"></div>
+<span class="text-xs uppercase tracking-widest text-outline">Shared Excellence</span>
+</div>
+</div>
+<!-- Small Feature Card 1 -->
+<div class="md:col-span-5 bg-surface-container-low p-10 rounded-xl flex flex-col justify-between">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-primary text-3xl">public</span>
+<h3 class="text-2xl font-bold font-headline">Global Impact</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            Connect with emerging talent from 45+ countries, bringing your industry insights to a diverse, global workforce.
+                        </p>
+</div>
+</div>
+<!-- Small Feature Card 2 -->
+<div class="md:col-span-5 bg-surface-container p-10 rounded-xl flex flex-col justify-between">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-primary text-3xl">auto_graph</span>
+<h3 class="text-2xl font-bold font-headline">Structured Growth</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            Access curated tools and session frameworks designed to maximize the value of every minute you invest.
+                        </p>
+</div>
+</div>
+<!-- Large Feature Card 2 -->
+<div class="md:col-span-7 bg-surface-container-lowest p-10 rounded-xl flex flex-col justify-between min-h-[320px]">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-primary text-3xl">history_edu</span>
+<h3 class="text-2xl font-bold font-headline">Legacy Building</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            Your career has been a series of milestones. Use this space to archive your experiences and distill them into actionable wisdom for others.
+                        </p>
+</div>
+<div class="mt-8">
+<div class="flex -space-x-4">
+<div class="w-10 h-10 rounded-full border-2 border-background overflow-hidden">
+<img alt="Mentor A" class="w-full h-full object-cover" data-alt="Portrait of a male mentor with glasses in a professional setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkUFNnKomhYFafX0CVD1TQeU6jMx965SL8hD9zwqhntOPvevH8ibQ1UgnrrVhVJEaLUxLGVQuJG7PGvqsWhsyksDBnSgJ6Ya7_eIAQu86q2e8xzpdBpcoXGlYjvbzBB9AXMzOhlYJjLMTej-ZbZAjmWlunPCsAiSI9OARma5jrF99b-yy7vaEGpiCq7ahzQw1UjNtn90297KkNBRvg9tATuNkWVLbJjDrcc6jvAJJtKTdGB_MWB5KS6200qR0e8mcklytNZvJ2nFg5"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-background overflow-hidden">
+<img alt="Mentor B" class="w-full h-full object-cover" data-alt="Portrait of a female executive mentor smiling softly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1gJKB7ojD9zA976xLMIAPDslkf6Fib6D6H9pqmbCbl8XjoKY6FZTRCxvOPEYlzDfSn8EyKmhYkcj5uHChvbpIR4FybqU4dFKMB8kTcV3N_ICL0UdihwhqrivLdHMbQrWs1GUUaGDAyl31OBCKVtMF7MkWbTpnbypMc0VLCdWJy-k_TBabWUT9pxnyUIbWCWaqJ3MGUjRAisbOux8E993DwCa3DrqqJBdAHwvtlHJYYnt9B56Xrs7_xvLBeSygQVdeTaiLA10q9fAd"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-background overflow-hidden">
+<img alt="Mentor C" class="w-full h-full object-cover" data-alt="Portrait of a young male mentor in a modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwqTcQ4MvXipZ4Z3PW78b9plpQAxy4AA6NxLfgFr2rtdyOo1J8VPy39QA1Guluhua4VLhXdlIzk2ZmjWYrGzheXRBwvwy3VkAzkJYUqp2fDF1uenVNvNqMddQhYHriUWzmac1yJVvgDCyrJ3YJwtBJzRVivZ3Pcg6rKfBLp-h4229mzBnYHBFTyuzcR-YKniYfD4zZCnyL3i2w5Ty4GnW69IR7bcwJXhP7Epd0RMNO9r6WSBT83636WHAQiCGG9Ml85c8gHB0rfJs9"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-background bg-primary-container flex items-center justify-center text-[10px] font-bold text-on-primary-container">
+                                +2k
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-[#fbf9f4] border-t border-[#b1b3a9]/10">
+<div class="flex flex-col md:flex-row justify-between items-center px-20 max-w-screen-2xl mx-auto gap-8">
+<p class="font-['Inter'] text-xs uppercase tracking-widest text-[#31332c]/60">
+                © 2024 The Ivory Gallery. Professional Mentorship Excellence.
+            </p>
+<nav class="flex gap-12">
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-[#31332c]/40 hover:text-[#31332c] underline underline-offset-4 decoration-[#b1b3a9] transition-all duration-200" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-[#31332c]/40 hover:text-[#31332c] underline underline-offset-4 decoration-[#b1b3a9] transition-all duration-200" href="#">Terms of Service</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-[#31332c]/40 hover:text-[#31332c] underline underline-offset-4 decoration-[#b1b3a9] transition-all duration-200" href="#">Contact Support</a>
+</nav>
+</div>
+</footer>
+</body></html>

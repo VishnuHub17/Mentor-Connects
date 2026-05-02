@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | Atheneum Ivory</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#d6e3fc",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#c8d5ed",
+                        "primary-dim": "#465367",
+                        "surface-container-highest": "#e2e3d9",
+                        "outline": "#797c73",
+                        "outline-variant": "#b1b3a9",
+                        "surface-container-high": "#e8e9e0",
+                        "on-error": "#fff7f6",
+                        "on-error-container": "#752121",
+                        "on-secondary-fixed": "#264350",
+                        "secondary-dim": "#3a5764",
+                        "inverse-primary": "#d9e6ff",
+                        "primary": "#525f74",
+                        "tertiary-fixed": "#ddddfe",
+                        "secondary": "#466370",
+                        "on-primary-container": "#455266",
+                        "surface-tint": "#525f74",
+                        "on-primary-fixed": "#334053",
+                        "error-dim": "#4e0309",
+                        "surface-bright": "#fbf9f4",
+                        "inverse-on-surface": "#9e9d99",
+                        "error": "#9f403d",
+                        "on-tertiary": "#fbf8ff",
+                        "on-primary": "#f6f7ff",
+                        "on-secondary": "#f3faff",
+                        "inverse-surface": "#0e0e0c",
+                        "background": "#fbf9f4",
+                        "on-background": "#31332c",
+                        "secondary-fixed-dim": "#bbd9e9",
+                        "tertiary-container": "#ddddfe",
+                        "tertiary": "#5b5d78",
+                        "surface-container-low": "#f5f4ed",
+                        "surface-container": "#efeee6",
+                        "surface-variant": "#e2e3d9",
+                        "on-surface": "#31332c",
+                        "secondary-container": "#c9e7f7",
+                        "on-surface-variant": "#5e6058"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+<main class="flex-grow flex flex-col lg:flex-row">
+<!-- LEFT SIDE: Platform Information -->
+<section class="lg:w-1/2 bg-surface-container-low flex flex-col justify-center px-8 py-16 lg:px-24">
+<div class="max-w-xl">
+<div class="mb-12 flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center shadow-md transform rotate-3">
+<span class="material-symbols-outlined text-surface-container-lowest text-xl" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+</div>
+<span class="font-headline font-extrabold text-xl tracking-tighter text-on-surface">Atheneum Ivory</span>
+</div>
+<h2 class="font-headline font-bold text-4xl lg:text-5xl text-on-surface tracking-tight mb-8">
+                    Elevating Minds Through Mentorship
+                </h2>
+<p class="text-on-surface-variant text-lg mb-12 max-w-md leading-relaxed">
+                    Join a sanctuary of scholarly excellence where knowledge flows seamlessly between generations of experts and aspirants.
+                </p>
+<div class="space-y-8">
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<div>
+<h3 class="font-headline font-semibold text-lg text-on-surface">Expert-led sessions</h3>
+<p class="text-on-surface-variant/80 text-sm">Direct access to industry luminaries and seasoned academics.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">public</span>
+</div>
+<div>
+<h3 class="font-headline font-semibold text-lg text-on-surface">Global knowledge exchange</h3>
+<p class="text-on-surface-variant/80 text-sm">Connect with a diverse network spanning continents and disciplines.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<h3 class="font-headline font-semibold text-lg text-on-surface">Professional growth</h3>
+<p class="text-on-surface-variant/80 text-sm">Structured pathways designed to accelerate your career trajectory.</p>
+</div>
+</div>
+</div>
+<div class="mt-16 flex items-center gap-6 opacity-20">
+<span class="material-symbols-outlined text-4xl">school</span>
+<span class="material-symbols-outlined text-4xl">diversity_3</span>
+<span class="material-symbols-outlined text-4xl">history_edu</span>
+</div>
+</div>
+</section>
+<!-- RIGHT SIDE: Sign-in Form -->
+<section class="lg:w-1/2 flex flex-col items-center justify-center px-6 py-16 bg-background">
+<div class="w-full max-w-[440px] bg-surface-container-lowest p-8 md:p-10 rounded-xl shadow-[0_10px_40px_rgba(49,51,44,0.06)] border border-outline-variant/10">
+<div class="text-center mb-10">
+<h1 class="font-headline font-bold text-3xl text-on-surface tracking-tight mb-2">Welcome back</h1>
+<p class="text-on-surface-variant/80 font-body text-sm">Sign in to your account</p>
+</div>
+<form class="space-y-6">
+<!-- Email Field -->
+<div class="space-y-2">
+<label class="block text-xs font-semibold uppercase tracking-wider text-on-surface-variant ml-1" for="email">Email address</label>
+<div class="relative">
+<input class="w-full bg-surface-container-highest border-none rounded-lg px-4 py-3.5 text-on-surface placeholder:text-outline-variant focus:ring-2 focus:ring-primary/20 transition-all duration-200" id="email" name="email" placeholder="name@atheneum.edu" required="" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="space-y-2">
+<div class="flex justify-between items-center px-1">
+<label class="block text-xs font-semibold uppercase tracking-wider text-on-surface-variant" for="password">Password</label>
+<a class="text-xs font-medium text-primary hover:text-primary-dim transition-colors" href="#">Forgot password?</a>
+</div>
+<div class="relative">
+<input class="w-full bg-surface-container-highest border-none rounded-lg px-4 py-3.5 text-on-surface placeholder:text-outline-variant focus:ring-2 focus:ring-primary/20 transition-all duration-200" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+</div>
+</div>
+<!-- Primary CTA -->
+<button class="w-full bg-primary hover:bg-primary-dim text-on-primary font-semibold py-4 rounded-lg shadow-md active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2 mt-4" type="submit">
+<span>Sign In</span>
+<span class="material-symbols-outlined text-[1.2rem]">arrow_forward</span>
+</button>
+</form>
+<div class="mt-10 pt-8 border-t border-outline-variant/10 text-center">
+<p class="text-sm text-on-surface-variant">
+                        Don't have an account? 
+                        <a class="font-semibold text-primary hover:text-primary-dim ml-1" href="#">Sign up</a>
+</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full py-8 border-t border-[#b1b3a9]/15 bg-[#fbf9f4] dark:bg-[#31332c] font-['Inter'] text-sm tracking-wide flex flex-col md:flex-row justify-between items-center px-12 gap-6">
+<div class="text-[#31332c]/50 dark:text-[#fbf9f4]/50">
+            © 2024 Atheneum Ivory. All rights reserved.
+        </div>
+<div class="flex gap-8">
+<a class="text-[#31332c]/50 dark:text-[#fbf9f4]/50 hover:text-[#525f74] transition-colors" href="#">Privacy Policy</a>
+<a class="text-[#31332c]/50 dark:text-[#fbf9f4]/50 hover:text-[#525f74] transition-colors" href="#">Terms of Service</a>
+<a class="text-[#31332c]/50 dark:text-[#fbf9f4]/50 hover:text-[#525f74] transition-colors" href="#">Help Center</a>
+</div>
+</footer>
+</body></html>

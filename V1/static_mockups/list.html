@@ -1,0 +1,402 @@
+<html class="light" lang="en"><head></head><body class="font-body selection:bg-primary-container selection:text-on-primary-container">```html
+
+
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Webinar Management | The Ivory Gallery</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-container": "#395663",
+              "secondary-container": "#c9e7f7",
+              "on-primary-fixed": "#334053",
+              "secondary-fixed-dim": "#bbd9e9",
+              "surface": "#fbf9f4",
+              "primary-container": "#d6e3fc",
+              "primary-dim": "#465367",
+              "tertiary-fixed-dim": "#cecfef",
+              "error-dim": "#4e0309",
+              "error-container": "#fe8983",
+              "surface-container-high": "#e8e9e0",
+              "on-secondary-fixed-variant": "#435f6d",
+              "primary-fixed": "#d6e3fc",
+              "on-surface": "#31332c",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#5e6058",
+              "on-tertiary-container": "#4c4e68",
+              "tertiary": "#5b5d78",
+              "tertiary-dim": "#4f516c",
+              "secondary": "#466370",
+              "on-error-container": "#752121",
+              "surface-variant": "#e2e3d9",
+              "surface-bright": "#fbf9f4",
+              "background": "#fbf9f4",
+              "secondary-dim": "#3a5764",
+              "error": "#9f403d",
+              "surface-container-low": "#f5f4ed",
+              "on-tertiary": "#fbf8ff",
+              "inverse-on-surface": "#9e9d99",
+              "outline": "#797c73",
+              "tertiary-container": "#ddddfe",
+              "on-background": "#31332c",
+              "surface-dim": "#d9dbcf",
+              "on-primary-fixed-variant": "#4f5c71",
+              "primary": "#525f74",
+              "on-error": "#fff7f6",
+              "surface-tint": "#525f74",
+              "inverse-surface": "#0e0e0c",
+              "on-tertiary-fixed-variant": "#565873",
+              "inverse-primary": "#d9e6ff",
+              "on-primary-container": "#455266",
+              "on-tertiary-fixed": "#3a3c55",
+              "surface-container": "#efeee6",
+              "secondary-fixed": "#c9e7f7",
+              "on-primary": "#f6f7ff",
+              "surface-container-highest": "#e2e3d9",
+              "on-secondary-fixed": "#264350",
+              "primary-fixed-dim": "#c8d5ed",
+              "tertiary-fixed": "#ddddfe",
+              "outline-variant": "#b1b3a9",
+              "on-secondary": "#f3faff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        background-color: #fbf9f4;
+        color: #31332c;
+      }
+      .table-fixed-header thead th {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: #f5f4ed;
+      }
+    </style>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 z-40 bg-[#fbf9f4]/80 backdrop-blur-xl flex justify-between items-center px-12">
+<div class="flex items-center gap-6">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant">search</span>
+<input class="bg-surface-container-highest border-none rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-1 focus:ring-outline-variant w-64 placeholder:text-outline" placeholder="Search archives..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="relative text-[#31332c] hover:text-[#525f74] transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full border-2 border-surface"></span>
+</button>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-['Manrope'] text-sm font-semibold shadow-sm hover:opacity-90 transition-all active:scale-95">
+      Invite Mentee
+    </button>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="h-screen w-64 fixed left-0 top-0 bg-[#f5f4ed] border-r-0 flex flex-col py-8 px-6 font-['Manrope'] antialiased">
+<div class="flex flex-col gap-1 flex-grow">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-[#31332c]/70 font-medium hover:bg-[#e8e9e0] transition-colors duration-200 text-sm active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-[#525f74] font-bold border-r-2 border-[#525f74] bg-[#efeee6] text-sm active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="video_library">video_library</span>
+<span>Webinars</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-[#31332c]/70 font-medium hover:bg-[#e8e9e0] transition-colors duration-200 text-sm active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="event_note">event_note</span>
+<span>Sessions</span>
+</a>
+</div>
+<div class="flex flex-col gap-1 pt-4 border-t border-outline-variant/10">
+<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-[#31332c]/70 font-medium hover:bg-[#e8e9e0] transition-colors duration-200 text-xs active:scale-95" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-[#31332c]/70 font-medium hover:bg-[#e8e9e0] transition-colors duration-200 text-xs active:scale-95" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="help">help</span>
+<span>Support</span>
+</a>
+</div>
+<div class="mt-auto pt-6 pb-2 border-t border-outline-variant/10 px-2 mb-2 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1Do806q-oT0Yh4sm2dN7QV-ZnlW3YNLK_yR9p0oGRwLq6BGf7ZqauJJYSK9Hyi3N9tUQcKsIA38aQSueN0YdUZXTTm8ikQORLxAj3m16xm-TmiIZkyhmSLQQ5xDJqIe4wcnzcHxdDlS-WvZ4UW9QgJfT0I8ZQSnqmgbuVmy5x0Q80JmM8hNWmX2CtAeG9ipzjn--Ev5lzhKXpNc93T0laYXJNXTb7qfT4DPAynqLjRQx3dG8NT0WUKbz2A-Lauq_LOB6TTZe8Ft2t"/>
+</div>
+<div class="flex flex-col">
+<h1 class="text-sm font-bold tracking-tight text-[#31332c]">Marcus Ivory</h1>
+<p class="text-[10px] text-[#525f74] font-medium tracking-wide uppercase">Mentor Workspace</p>
+</div>
+</div><div class="mt-8 px-4 py-6 bg-surface-container rounded-xl">
+<p class="text-[10px] uppercase tracking-widest text-outline mb-2 font-bold">Storage</p>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full mb-2">
+<div class="w-3/4 h-full bg-primary rounded-full"></div>
+</div>
+<p class="text-[11px] text-on-surface-variant">75% of archive used</p>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="ml-64 p-10 mt-16 max-w-[1400px]">
+<div class="flex justify-between items-end mb-12">
+<div class="space-y-2">
+<h2 class="text-4xl font-headline font-extrabold tracking-tight text-on-surface">Webinars</h2>
+<p class="text-on-surface-variant font-medium">Curate and manage your high-end academic stage.</p>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 px-3 py-1.5 bg-surface-container-low rounded-full border border-outline-variant/10">
+<span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest flex items-center gap-1">
+      Synced with Email
+      <span class="material-symbols-outlined text-[12px]" data-icon="check_circle">check_circle</span>
+</span>
+</div>
+<div class="flex bg-surface-container-low p-1 rounded-lg border border-outline-variant/10">
+<button class="flex items-center gap-2 px-4 py-1.5 rounded-md bg-primary text-on-primary text-xs font-bold shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="view_list">view_list</span>
+      List
+    </button>
+<button class="flex items-center gap-2 px-4 py-1.5 rounded-md text-on-surface-variant hover:bg-surface-container-high text-xs font-bold transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_month">calendar_month</span>
+      Calendar
+    </button>
+</div>
+<button class="flex items-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-md font-semibold text-sm shadow-lg shadow-primary/20 hover:opacity-90 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-lg" data-icon="add">add</span>
+    Add New Webinar
+  </button>
+</div>
+</div>
+<!-- Filter Bar -->
+<div class="bg-surface-container-low p-4 rounded-xl mb-6 flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 bg-surface-container-lowest px-4 py-2 rounded-full border border-outline-variant/10">
+<span class="text-xs font-bold text-outline-variant uppercase tracking-tighter">Status:</span>
+<select class="bg-transparent border-none text-sm font-semibold text-on-surface focus:ring-0 cursor-pointer py-0">
+<option>All Statuses</option>
+<option>Live Now</option>
+<option>Scheduled</option>
+<option>Completed</option>
+</select>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-lowest px-4 py-2 rounded-full border border-outline-variant/10">
+<span class="text-xs font-bold text-outline-variant uppercase tracking-tighter">Date:</span>
+<select class="bg-transparent border-none text-sm font-semibold text-on-surface focus:ring-0 cursor-pointer py-0">
+<option>All Time</option>
+<option>Next 7 Days</option>
+<option>This Month</option>
+<option>Past Archive</option>
+</select>
+</div>
+</div>
+<div class="text-sm font-medium text-on-surface-variant">
+                Showing <span class="text-primary font-bold">12</span> archived sessions
+            </div>
+</div>
+<!-- Webinar List Table -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden border border-outline-variant/10 shadow-sm">
+<table class="w-full border-collapse text-left">
+<thead class="bg-surface-container-low text-xs font-bold uppercase tracking-widest text-outline">
+<tr>
+<th class="px-6 py-4">Webinar Title</th>
+<th class="px-6 py-4">Date &amp; Time</th>
+<th class="px-6 py-4">Duration</th>
+<th class="px-6 py-4">Attendance</th>
+<th class="px-6 py-4">Status</th>
+<th class="px-6 py-4 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<!-- Row 1: Live -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg overflow-hidden bg-surface-container shadow-sm border border-outline-variant/10 flex-shrink-0">
+<img alt="Advanced Curatorial Practices" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtbE_2qXY-jRXjCWFNi5qSCMVhnXODRAWpMrYbVgIckUKhD6hZnMOHr0wju55ewzQ8QXhMpS3aZKawYg8MpAUXbHjj-7uvvS9omspGrKKgEWQb6AZ-C-77teKBq6H5SJiUiZzUz-fXKd6gqTvY8r0ON3l9btkqpHTMz8I8ccHRJSY25g_3eYBLm1dyfrdzJG_zPVwGxf7x-oIB6HdChstIH8LjMsCyB8G_ZvFvTnXjPrUXTtdb0QLY83Yq3Gz9jGrE0YbBIn8Xezv0"/>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface leading-tight">Advanced Curatorial Practices in Modern Art</h4>
+<p class="text-[11px] text-on-surface-variant mt-1">Global Art Series</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="text-sm font-medium text-on-surface">Today</div>
+<div class="text-xs text-on-surface-variant">2:00 PM</div>
+</td>
+<td class="px-6 py-5">
+<span class="text-xs font-bold text-on-secondary-container bg-secondary-container px-3 py-1 rounded-full">90 Min</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-1.5 text-sm font-semibold text-primary">
+<span class="material-symbols-outlined text-[18px]" data-icon="group">group</span>
+                        342
+                    </div>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-error animate-pulse">
+<span class="w-1.5 h-1.5 bg-error rounded-full"></span> Live Now
+                    </div>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="text-primary font-bold text-sm hover:underline flex items-center gap-1 ml-auto">
+                        Join Session <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: Scheduled -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg overflow-hidden bg-surface-container shadow-sm border border-outline-variant/10 flex-shrink-0">
+<img alt="Intellectual Property" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnxF9x18_JkHD7dY-Ld-GPUrXzSBFGpYYYz-jssozXvztx4ES2-uRkD0avDft9PbaOpaYv8WDCUE0SsjjkUACbnP2RGBmapUmJ1LGBRCAJRpl1p-mOC9QcrqyAv_G3vp0jn5StZu5q-6Nf3lUN5RL9Ikj20f5xgfy-zpj2moszsYYENoc4-ARxHfqUQcoZ7iyvNQ-4tQBW7fpxaVXBeLTpJK5VyAGd0cvfz4yCc3FM9YzXHAa9TortCXmGYipSvWUmHAzt9Dlk0ytr"/>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface leading-tight">Intellectual Property &amp; the Digital Creator</h4>
+<p class="text-[11px] text-on-surface-variant mt-1">Legal Insights</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="text-sm font-medium text-on-surface">Oct 12, 2023</div>
+<div class="text-xs text-on-surface-variant">10:00 AM</div>
+</td>
+<td class="px-6 py-5">
+<span class="text-xs font-bold text-on-primary-container bg-primary-container px-3 py-1 rounded-full">60 Min</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-1.5 text-sm font-medium text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]" data-icon="person_add">person_add</span>
+                        1,204 Registered
+                    </div>
+</td>
+<td class="px-6 py-5">
+<div class="text-[10px] font-black uppercase tracking-widest text-outline">
+                        Scheduled
+                    </div>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex items-center justify-end gap-3">
+<button class="text-primary font-bold text-sm hover:underline">Start Meeting</button>
+<button class="p-1.5 hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="edit">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Completed -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg overflow-hidden bg-surface-container shadow-sm border border-outline-variant/10 flex-shrink-0 grayscale">
+<img alt="Philosophy of Minimalism" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfITuG5G8hc614wNtvi28td_3MF6Aonu4grXeJ0QrpFXqJ7pta3iuX8jzChWCfq-Y6zAG1glI42AAEF86-CKYw1wTGcXGlLhsFEGBl02UykX3-jHRhsbdDUGNQiYa3c3HbK9u7SD5zVXARxPF5jq5GLwRcd_qCR_x-BlNDC-YGz_Q8We1-ItugScYPtRJBHFHaswc4B3HNc_X4LOxH9xxoehi__tsoLTFaCuhji14DQWrIlaVGWiKSoONVWv7CWW1U9SNfqhD7EW0D"/>
+</div>
+<div class="opacity-70 group-hover:opacity-100 transition-opacity">
+<h4 class="font-headline font-bold text-on-surface leading-tight">The Philosophy of Minimalism in UI</h4>
+<p class="text-[11px] text-on-surface-variant mt-1">Design Theory</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="text-sm font-medium text-on-surface/70">Oct 05, 2023</div>
+<div class="text-xs text-on-surface-variant">3:30 PM</div>
+</td>
+<td class="px-6 py-5">
+<span class="text-xs font-bold text-on-surface-variant bg-surface-container-highest px-3 py-1 rounded-full">45 Min</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-1.5 text-sm font-medium text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]" data-icon="done_all">done_all</span>
+                        142 Attended
+                    </div>
+</td>
+<td class="px-6 py-5">
+<div class="text-[10px] font-black uppercase tracking-widest text-outline-variant bg-surface-container-high px-2 py-0.5 rounded-full inline-block">
+                        Completed
+                    </div>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="text-primary font-bold text-sm flex items-center gap-1 ml-auto group/btn">
+                        View Analytics <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-0.5 transition-transform" data-icon="bar_chart">bar_chart</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Scheduled -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg overflow-hidden bg-surface-container shadow-sm border border-outline-variant/10 flex-shrink-0">
+<img alt="Editorial Typography" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCGRn_uhKblvR-fgXFGuFSGMmZscPpJXcgL9ONZOsZA1rapQUjo7_xCSbZ-FofBXJ1ukbn7Z-iUbtHC52ML45BqvQD5Wm2F5U9Ykbx5bIhFV9CfjZ4GU8tJL4uIR_kNSLQMMKreBwYoudixpliqyLtcBVr3vj83Azp4laQZ68TdpI-BU2bZNX8CTk3J_LPAaZd9wMQ1Krrea5iikaPoUnk-31LsNDVByeiJlwtp_Q0J6fhXchV7enbDuAuAd-7zjJOlxZEnhX8kvih"/>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface leading-tight">Mastering Editorial Typography</h4>
+<p class="text-[11px] text-on-surface-variant mt-1">Creative Masterclass</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="text-sm font-medium text-on-surface">Oct 15, 2023</div>
+<div class="text-xs text-on-surface-variant">4:00 PM</div>
+</td>
+<td class="px-6 py-5">
+<span class="text-xs font-bold text-on-primary-container bg-primary-container px-3 py-1 rounded-full">120 Min</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-1.5 text-sm font-medium text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]" data-icon="person_add">person_add</span>
+                        856 Registered
+                    </div>
+</td>
+<td class="px-6 py-5">
+<div class="text-[10px] font-black uppercase tracking-widest text-outline">
+                        Scheduled
+                    </div>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex items-center justify-end gap-3">
+<button class="text-primary font-bold text-sm hover:underline">Start Meeting</button>
+<button class="p-1.5 hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="share">share</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination/Footer Actions -->
+<div class="mt-10 flex items-center justify-between">
+<p class="text-xs font-medium text-on-surface-variant">Page 1 of 3</p>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="chevron_left">chevron_left</span>
+</button>
+<div class="flex gap-1">
+<span class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center text-xs font-bold">1</span>
+<span class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-xs font-bold cursor-pointer">2</span>
+<span class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-xs font-bold cursor-pointer">3</span>
+</div>
+<button class="p-2 rounded-full bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</main>
+```</body></html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-container": "#395663",
+              "secondary-container": "#c9e7f7",
+              "on-primary-fixed": "#334053",
+              "secondary-fixed-dim": "#bbd9e9",
+              "surface": "#fbf9f4",
+              "primary-container": "#d6e3fc",
+              "primary-dim": "#465367",
+              "tertiary-fixed-dim": "#cecfef",
+              "error-dim": "#4e0309",
+              "error-container": "#fe8983",
+              "surface-container-high": "#e8e9e0",
+              "on-secondary-fixed-variant": "#435f6d",
+              "primary-fixed": "#d6e3fc",
+              "on-surface": "#31332c",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#5e6058",
+              "on-tertiary-container": "#4c4e68",
+              "tertiary": "#5b5d78",
+              "tertiary-dim": "#4f516c",
+              "secondary": "#466370",
+              "on-error-container": "#752121",
+              "surface-variant": "#e2e3d9",
+              "surface-bright": "#fbf9f4",
+              "background": "#fbf9f4",
+              "secondary-dim": "#3a5764",
+              "error": "#9f403d",
+              "surface-container-low": "#f5f4ed",
+              "on-tertiary": "#fbf8ff",
+              "inverse-on-surface": "#9e9d99",
+              "outline": "#797c73",
+              "tertiary-container": "#ddddfe",
+              "on-background": "#31332c",
+              "surface-dim": "#d9dbcf",
+              "on-primary-fixed-variant": "#4f5c71",
+              "primary": "#525f74",
+              "on-error": "#fff7f6",
+              "surface-tint": "#525f74",
+              "inverse-surface": "#0e0e0c",
+              "on-tertiary-fixed-variant": "#565873",
+              "inverse-primary": "#d9e6ff",
+              "on-primary-container": "#455266",
+              "on-tertiary-fixed": "#3a3c55",
+              "surface-container": "#efeee6",
+              "secondary-fixed": "#c9e7f7",
+              "on-primary": "#f6f7ff",
+              "surface-container-highest": "#e2e3d9",
+              "on-secondary-fixed": "#264350",
+              "primary-fixed-dim": "#c8d5ed",
+              "tertiary-fixed": "#ddddfe",
+              "outline-variant": "#b1b3a9",
+              "on-secondary": "#f3faff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #fbf9f4;
+            color: #31332c;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="flex min-h-screen">
+<!-- SideNavBar from JSON -->
+<aside class="flex flex-col fixed left-0 top-0 h-screen py-8 px-6 w-64 border-r-0 bg-[#f5f4ed] dark:bg-slate-900 z-40 font-['Manrope'] antialiased">
+<div class="mb-12">
+<h1 class="text-xl font-bold tracking-tight text-[#31332c] dark:text-slate-100">The Ivory Gallery</h1>
+<p class="text-[10px] uppercase tracking-widest text-[#525f74]/60 font-bold mt-1">Mentor Workspace</p>
+</div>
+<nav class="flex flex-col space-y-2">
+<!-- Active Tab: Dashboard -->
+<a class="text-[#525f74] dark:text-white font-bold border-r-2 border-[#525f74] bg-[#efeee6] dark:bg-slate-800/50 p-3 flex items-center gap-3 transition-all scale-95 active:opacity-80" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="text-[#31332c]/70 dark:text-slate-400 font-medium p-3 flex items-center gap-3 hover:bg-[#e8e9e0] dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="video_library">video_library</span>
+                Webinars
+            </a>
+<a class="text-[#31332c]/70 dark:text-slate-400 font-medium p-3 flex items-center gap-3 hover:bg-[#e8e9e0] dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="event_note">event_note</span>
+                Sessions
+            </a>
+</nav>
+<div class="mt-auto space-y-4">
+<nav class="flex flex-col space-y-1">
+<a class="text-[#31332c]/70 dark:text-slate-400 font-medium p-3 text-sm flex items-center gap-3 hover:bg-[#e8e9e0] dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="settings">settings</span>
+                    Settings
+                </a>
+<a class="text-[#31332c]/70 dark:text-slate-400 font-medium p-3 text-sm flex items-center gap-3 hover:bg-[#e8e9e0] dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="help">help</span>
+                    Support
+                </a>
+</nav>
+<div class="flex items-center gap-3 px-3 py-4 rounded-xl bg-surface-container-highest/30">
+<img alt="User Profile Avatar" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB--qAotExUdxGt0exuAow6HDr0UIEZyHuNErgf54YJp3nIZ_CAijnGWAI-8R204xC80ZjaMZ8asfrVNL7OjlxoA_YuGIxqCbHDU5X64l2h575KpbswbPmZCHtWc5Q1OkF6ceJOqO1Yr1QDgM45KBCJq45WESGbZ7RQL5Wd7Tvy9tOeOIDstdV2EZDMapB4DhVuzCr9gwHcUrjaeWvQ8L6HIIlkbdMAf7M-uoDxjXxbZoHRLx6b-R14J6BYLXfsQUl_nwLg6Td1dOzx"/>
+<div class="overflow-hidden">
+<p class="text-sm font-bold truncate">Marcus Ivory</p>
+<p class="text-xs text-on-surface-variant">Senior Curator</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 ml-64 min-h-screen">
+<!-- TopAppBar from JSON -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 z-40 bg-[#fbf9f4]/80 dark:bg-slate-950/80 backdrop-blur-xl flex justify-between items-center px-12 font-['Manrope'] text-sm tracking-wide">
+<div class="flex items-center gap-8">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline-variant">search</span>
+<input class="bg-surface-container-highest border-none rounded-full pl-10 pr-4 py-2 text-sm w-64 focus:ring-1 focus:ring-[#b1b3a9] font-body transition-all" placeholder="Search resources..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-[#31332c] hover:text-[#525f74] transition-colors relative cursor-pointer">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="h-6 w-[1px] bg-outline-variant/20"></div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-md font-semibold flex items-center gap-2 hover:bg-primary-dim transition-all shadow-sm active:opacity-80">
+<span class="material-symbols-outlined text-sm" data-icon="person_add">person_add</span>
+                    Invite Mentee
+                </button>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="px-10 py-24 max-w-7xl mx-auto">
+<!-- Hero Header -->
+<div class="mb-16">
+<h2 class="font-headline text-[3.5rem] font-extrabold text-on-surface leading-[1.1] tracking-tight max-w-2xl">
+                    Good morning, Marcus. <span class="text-primary-dim/60">Your gallery awaits.</span>
+</h2>
+<p class="mt-6 text-on-surface-variant font-body text-lg max-w-xl">
+                    Review your intellectual impact and prepare for today's curated academic exchanges.
+                </p>
+</div>
+<!-- Impact Stats: Tonal Layering -->
+<div class="grid grid-cols-1 gap-8 mb-20 md:grid-cols-2">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_10px_40px_rgba(49,51,44,0.04)] border border-outline-variant/5">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-secondary-container/30 rounded-full">
+<span class="material-symbols-outlined text-secondary" data-icon="video_library">video_library</span>
+</div>
+<span class="text-xs font-bold text-secondary uppercase tracking-widest">+12%</span>
+</div>
+<p class="text-4xl font-headline font-black text-on-surface mb-1">24</p>
+<p class="text-sm font-medium text-on-surface-variant font-label">Total Webinars</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_10px_40px_rgba(49,51,44,0.04)] border border-outline-variant/5">
+<div class="flex justify-between items-start mb-6">
+<div class="p-3 bg-tertiary-container/30 rounded-full">
+<span class="material-symbols-outlined text-tertiary" data-icon="calendar_month">calendar_month</span>
+</div>
+<span class="text-xs font-bold text-tertiary uppercase tracking-widest">Active</span>
+</div>
+<p class="text-4xl font-headline font-black text-on-surface mb-1">08</p>
+<p class="text-sm font-medium text-on-surface-variant font-label">Upcoming Sessions</p>
+</div>
+</div>
+<!-- Main Dashboard Layout: Asymmetric Bento Grid -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Left Column: Upcoming Webinars (The "Workhorse") -->
+<div class="col-span-12 lg:col-span-8 space-y-8">
+<div class="flex items-center justify-between">
+<h3 class="font-headline text-2xl font-bold">Upcoming Webinars</h3>
+<a class="text-primary text-sm font-bold flex items-center gap-1 hover:underline" href="#">
+                            View Schedule
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="space-y-4">
+<!-- Webinar Card 1 -->
+<div class="group bg-surface-container-low hover:bg-surface-bright transition-all duration-300 p-6 rounded-xl border border-transparent hover:shadow-[0_10px_40px_rgba(49,51,44,0.06)] flex flex-col md:flex-row gap-6 items-center">
+<div class="w-full md:w-32 h-20 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Webinar thumbnail" class="w-full h-full object-cover transition-transform group-hover:scale-110 duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2cPwFE828H6VeK4qCsUfUWllo2EOWdwJZb4W014_R_4ck6JaUBoPOIiil2x64IGAhItr5d45onwqg8J7f2bEVIND_VbrD47Lg3CMw-qLibZ0OZQbLaJ_O88T7Vqvp6lhI2sqw-GJjIo3_Gt9h7m5pWXK6tcpsPAFFZ1bUhZMjxmhy6VHF5qNvLScSFPvjLJiz6c06MwjXJ3kaO1lg5HqF-wQWCqSb_S9lPS_YoRP5tzbZita-6Q5c8pN69HOLLP_UM9mMB-V9LYlg"/>
+</div>
+<div class="flex-1 min-w-0">
+<span class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-widest rounded-full mb-2">Design Theory</span>
+<h4 class="text-lg font-bold text-on-surface truncate mb-1">Spatial Semantics in Modern Architecture</h4>
+<div class="flex items-center gap-4 text-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+                                        Oct 12, 2023
+                                    </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                                        10:00 AM EST
+                                    </span>
+</div>
+</div>
+<div class="flex-shrink-0">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-md font-bold text-sm hover:bg-primary-dim transition-all shadow-md group-active:scale-[0.98]">
+                                    Start Meeting
+                                </button>
+</div>
+</div>
+<!-- Webinar Card 2 -->
+<div class="group bg-surface-container-low hover:bg-surface-bright transition-all duration-300 p-6 rounded-xl border border-transparent hover:shadow-[0_10px_40px_rgba(49,51,44,0.06)] flex flex-col md:flex-row gap-6 items-center">
+<div class="w-full md:w-32 h-20 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Webinar thumbnail" class="w-full h-full object-cover transition-transform group-hover:scale-110 duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo3FNgOon_m1YxoK3pILXukwNoucP-2qRgV-5kHPRNHUHUfY4lxxRv0s-hiagLaZ2xEf_IwgYCwdZsHJE9x-XD_SY_xMvXBaAzJn3nK_GuMDuqzVk6o7DqRKoyI9mY99I221fhC8AXARpUyQohNeKElhk9dQAVj68KRB2oHC1WLjrXYCTnlcVXMfZn1GfrCAWecBwi5V3XSovH0utEr1DF_tgYzmKY5r-ZFpwwenLMvZuecfBchmNsqFTDnep2YIK7XQsznIPMNBRm"/>
+</div>
+<div class="flex-1 min-w-0">
+<span class="inline-block px-3 py-1 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest rounded-full mb-2">Philosophy</span>
+<h4 class="text-lg font-bold text-on-surface truncate mb-1">The Ethics of Curatorial Intervention</h4>
+<div class="flex items-center gap-4 text-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+                                        Oct 15, 2023
+                                    </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                                        02:30 PM EST
+                                    </span>
+</div>
+</div>
+<div class="flex-shrink-0">
+<button class="bg-surface-container-highest text-on-surface px-8 py-3 rounded-md font-bold text-sm hover:bg-surface-dim transition-all group-active:scale-[0.98]">
+                                    Edit Details
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Contextual Info & Quick Actions -->
+<div class="col-span-12 lg:col-span-4 space-y-8">
+<div class="bg-surface-container-low/50 p-8 rounded-xl">
+<h4 class="font-headline text-lg font-bold mb-6">Audience Growth</h4>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-primary-container flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<p class="text-sm font-bold">45 New Enrollments</p>
+<p class="text-xs text-on-surface-variant">Last 24 hours</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-tertiary-container flex items-center justify-center text-tertiary font-bold">
+<span class="material-symbols-outlined">star</span>
+</div>
+<div>
+<p class="text-sm font-bold">4.9/5 Avg. Rating</p>
+<p class="text-xs text-on-surface-variant">Across 12 webinars</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-secondary-container flex items-center justify-center text-secondary font-bold">
+<span class="material-symbols-outlined">chat_bubble</span>
+</div>
+<div>
+<p class="text-sm font-bold">21 Unread Questions</p>
+<p class="text-xs text-on-surface-variant">In Webinar Archives</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 py-3 text-sm font-bold text-primary border-t border-outline-variant/10 hover:bg-surface-container transition-colors">
+                            Analytics Dashboard
+                        </button>
+</div>
+<div class="bg-surface-container-highest/30 p-6 rounded-xl border-l-4 border-primary">
+<h5 class="text-xs font-black uppercase tracking-widest text-primary mb-2">Curator's Tip</h5>
+<p class="text-sm text-on-surface italic leading-relaxed">
+                            "Engagement peaks between the 15th and 25th minute. Plan your core interactive poll for that window to maximize retention."
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-10 right-10 w-16 h-16 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform active:scale-95 z-50 group">
+<span class="material-symbols-outlined text-3xl" data-icon="edit">edit</span>
+<span class="absolute right-full mr-4 bg-on-surface text-surface text-xs font-bold py-2 px-4 rounded-full whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Quick Note</span>
+</button>
+</body></html>
