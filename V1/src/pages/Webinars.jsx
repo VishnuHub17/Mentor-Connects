@@ -63,7 +63,17 @@ export default function Webinars({ session }) {
     extendedProps: { url: `/webinars/${w.id}` }
   }));
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) {
+    return (
+      <div className="flex flex-col items-center justify-center py-32 w-full">
+        <div className="relative w-16 h-16 flex items-center justify-center">
+          <div className="absolute w-full h-full border-4 border-dashed border-primary-container rounded-full animate-spin" style={{ animationDuration: '3s' }}></div>
+          <div className="absolute w-10 h-10 border-4 border-solid border-transparent border-t-primary border-b-primary rounded-full animate-spin" style={{ animationDuration: '1.5s' }}></div>
+        </div>
+        <p className="mt-4 text-sm text-on-surface-variant font-medium animate-pulse">Loading webinars...</p>
+      </div>
+    );
+  }
 
   return (
     <>

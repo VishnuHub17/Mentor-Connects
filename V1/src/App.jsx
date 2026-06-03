@@ -28,7 +28,34 @@ import OnboardingResume from './pages/OnboardingResume';
 
 const ProtectedRoute = ({ session, profile, children, allowedRoles, requireSetupCompleted }) => {
   if (!session) return <Navigate to="/login" replace />;
-  if (!profile) return <div>Loading profile...</div>;
+  if (!profile) {
+    return (
+      <div className="min-h-screen bg-background flex flex-col items-center justify-center font-body text-on-surface relative overflow-hidden">
+        {/* Subtle background glow blobs */}
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary-container rounded-full filter blur-3xl opacity-30 animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-secondary-container rounded-full filter blur-3xl opacity-30 animate-pulse delay-1000"></div>
+
+        <div className="relative flex flex-col items-center z-10">
+          <div className="relative w-24 h-24 flex items-center justify-center">
+            <div className="absolute w-full h-full border-4 border-dashed border-primary-container rounded-full animate-spin" style={{ animationDuration: '3s' }}></div>
+            <div className="absolute w-16 h-16 border-4 border-solid border-transparent border-t-primary border-b-primary rounded-full animate-spin" style={{ animationDuration: '1.5s' }}></div>
+            <div className="absolute w-8 h-8 bg-primary/20 rounded-full animate-ping"></div>
+          </div>
+          <h1 className="mt-8 text-2xl font-bold tracking-tight font-headline text-on-surface">
+            Mentor <span className="text-primary">Connects</span>
+          </h1>
+          <div className="mt-3 flex items-center gap-1.5 text-sm text-on-surface-variant font-medium">
+            <span>Loading profile</span>
+            <span className="flex gap-1">
+              <span className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></span>
+              <span className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></span>
+              <span className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (allowedRoles && !allowedRoles.includes(profile.role)) {
     return <Navigate to="/" replace />;
@@ -132,7 +159,35 @@ function App() {
   return (
     <BrowserRouter>
       {loading ? (
-        <div className="min-h-screen bg-background flex items-center justify-center font-headline text-on-surface">Loading The Ivory Gallery...</div>
+        <div className="min-h-screen bg-background flex flex-col items-center justify-center font-body text-on-surface relative overflow-hidden">
+          {/* Subtle background glow blobs */}
+          <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary-container rounded-full filter blur-3xl opacity-30 animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-secondary-container rounded-full filter blur-3xl opacity-30 animate-pulse delay-1000"></div>
+
+          <div className="relative flex flex-col items-center z-10">
+            {/* Elegant multi-ring loader */}
+            <div className="relative w-24 h-24 flex items-center justify-center">
+              <div className="absolute w-full h-full border-4 border-dashed border-primary-container rounded-full animate-spin" style={{ animationDuration: '3s' }}></div>
+              <div className="absolute w-16 h-16 border-4 border-solid border-transparent border-t-primary border-b-primary rounded-full animate-spin" style={{ animationDuration: '1.5s' }}></div>
+              <div className="absolute w-8 h-8 bg-primary/20 rounded-full animate-ping"></div>
+            </div>
+            
+            {/* Brand/AppName */}
+            <h1 className="mt-8 text-2xl font-bold tracking-tight font-headline text-on-surface">
+              Mentor <span className="text-primary">Connects</span>
+            </h1>
+            
+            {/* Loading text with animated dots */}
+            <div className="mt-3 flex items-center gap-1.5 text-sm text-on-surface-variant font-medium">
+              <span>Loading experience</span>
+              <span className="flex gap-1">
+                <span className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></span>
+                <span className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></span>
+                <span className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></span>
+              </span>
+            </div>
+          </div>
+        </div>
       ) : (
       <Routes>
         <Route 

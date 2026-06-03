@@ -322,10 +322,33 @@ export default function ProfilePreview({ session }) {
 
   if (loading) {
     return (
-      <div className="bg-background min-h-screen flex flex-col items-center justify-center font-body text-on-surface">
-        <div className="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin mb-6 shadow-lg shadow-primary/20"></div>
-        <h2 className="text-2xl font-headline font-extrabold tracking-tight mb-2">Analyzing LinkedIn Profile</h2>
-        <p className="text-on-surface-variant font-medium">Extracting your professional journey via Composio...</p>
+      <div className="bg-background min-h-screen flex flex-col items-center justify-center font-body text-on-surface relative overflow-hidden">
+        {/* Subtle background glow blobs */}
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary-container rounded-full filter blur-3xl opacity-30 animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-secondary-container rounded-full filter blur-3xl opacity-30 animate-pulse delay-1000"></div>
+
+        <div className="relative flex flex-col items-center z-10">
+          {/* Elegant multi-ring loader */}
+          <div className="relative w-24 h-24 flex items-center justify-center">
+            <div className="absolute w-full h-full border-4 border-dashed border-primary-container rounded-full animate-spin" style={{ animationDuration: '3s' }}></div>
+            <div className="absolute w-16 h-16 border-4 border-solid border-transparent border-t-primary border-b-primary rounded-full animate-spin" style={{ animationDuration: '1.5s' }}></div>
+            <div className="absolute w-8 h-8 bg-primary/20 rounded-full animate-ping"></div>
+          </div>
+          
+          <h2 className="mt-8 text-2xl font-bold tracking-tight font-headline text-on-surface text-center">
+            Analyzing <span className="text-primary">LinkedIn Profile</span>
+          </h2>
+          
+          {/* Loading text with animated dots */}
+          <div className="mt-3 flex items-center gap-1.5 text-sm text-on-surface-variant font-medium">
+            <span>Extracting your professional journey via Composio</span>
+            <span className="flex gap-1">
+              <span className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></span>
+              <span className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></span>
+              <span className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></span>
+            </span>
+          </div>
+        </div>
       </div>
     );
   }
