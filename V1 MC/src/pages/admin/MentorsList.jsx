@@ -73,8 +73,12 @@ export default function MentorsList() {
                 <tr key={mentor.id} className="hover:bg-surface-container-low/30 transition-colors">
                   <td className="px-6 py-4">
                     <div className="flex items-center gap-3">
-                      <div className="inline-flex w-10 h-10 bg-primary/10 text-primary items-center justify-center rounded-full font-bold">
-                        {(mentor.full_name || 'U')[0].toUpperCase()}
+                      <div className="inline-flex w-10 h-10 bg-primary/10 text-primary items-center justify-center rounded-full font-bold overflow-hidden flex-shrink-0">
+                        {mentor.avatar_url ? (
+                          <img src={mentor.avatar_url} alt={mentor.full_name || 'Mentor'} className="w-full h-full object-cover" />
+                        ) : (
+                          (mentor.full_name || 'U')[0].toUpperCase()
+                        )}
                       </div>
                       <div>
                         <p className="font-bold text-sm text-on-surface">{mentor.full_name || 'Unknown Mentor'}</p>

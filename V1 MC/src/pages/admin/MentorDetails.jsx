@@ -90,8 +90,12 @@ export default function MentorDetails() {
         </div>
         <div className="flex justify-between items-start">
           <div className="flex items-center gap-6">
-            <div className="w-20 h-20 bg-primary/10 text-primary text-3xl font-extrabold flex items-center justify-center rounded-full">
-              {(mentor.full_name || 'U')[0].toUpperCase()}
+            <div className="w-20 h-20 bg-primary/10 text-primary text-3xl font-extrabold flex items-center justify-center rounded-full overflow-hidden flex-shrink-0">
+              {mentor.avatar_url ? (
+                <img src={mentor.avatar_url} alt={mentor.full_name || 'Mentor'} className="w-full h-full object-cover" />
+              ) : (
+                (mentor.full_name || 'U')[0].toUpperCase()
+              )}
             </div>
             <div>
               <h2 className="text-3xl font-headline font-extrabold text-on-surface tracking-tight mb-1">
