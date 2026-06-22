@@ -99,7 +99,7 @@ export default function CompleteProfile({ session, profile }) {
             const verifyRes = await fetch(`${supabaseUrl}/functions/v1/composio-linkedin-v3?action=verify-connection`, {
                headers: { Authorization: `Bearer ${currentSession.access_token}` }
             });
-            
+
             if (verifyRes.ok) {
                // Success! Composio connected the account!
                clearVerificationPoll();
@@ -108,18 +108,16 @@ export default function CompleteProfile({ session, profile }) {
                setComposioImportStatus(ComposioImportStatus.SUCCEEDED);
                setOnboardingStep(OnboardingStep.PREVIEW);
                navigate('/setup/preview');
-             } else {
-               const errorMessage = await readErrorPayload(verifyRes);
-               console.log("[Verification Poll] Waiting or Failed:", { status: verifyRes.status, error: errorMessage });
-
-               if (verifyRes.status === 404) {
-                  clearVerificationPoll();
-                  setLoading(false);
-                  setComposioImportStatus(ComposioImportStatus.FAILED);
-                  setError('LinkedIn verification is unavailable right now because the Supabase edge function route `composio-linkedin-v3?action=verify-connection` returned 404. Deploy or update that edge function, or continue with manual profile entry.');
-                  return;
-               }
+               return;
             }
+
+            // A 404 here just means "not connected yet" (per the edge function's own
+            // design) - the popup also auto-closes itself ~1.5s after a successful
+            // LinkedIn redirect, well before Composio finishes activating the
+            // connection server-side. Neither of those is a failure - keep polling
+            // until the connection goes active or we hit the overall timeout below.
+            const errorMessage = await readErrorPayload(verifyRes);
+            console.log("[Verification Poll] Still waiting:", { status: verifyRes.status, error: errorMessage });
 
             if (pollStartedAtRef.current && Date.now() - pollStartedAtRef.current > 120000) {
                clearVerificationPoll();
@@ -127,12 +125,6 @@ export default function CompleteProfile({ session, profile }) {
                setComposioImportStatus(ComposioImportStatus.FAILED);
                setError('LinkedIn verification is taking longer than expected. Please try again, or continue with manual profile entry.');
                return;
-            }
-            
-            // If user manually closes popup and we still haven't succeeded, kill the poll
-            if (popup && popup.closed) {
-               clearVerificationPoll();
-               setLoading(false); // Only kill loading if it truly failed
             }
          } catch(e) { }
       }, 3000); // Check every 3 seconds
