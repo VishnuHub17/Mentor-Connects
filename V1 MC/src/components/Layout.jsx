@@ -92,7 +92,7 @@ export default function Layout({ children, profile, session }) {
           >
             <img alt="Avatar" className="w-10 h-10 rounded-full object-cover" src={profile?.avatar_url || "https://ui-avatars.com/api/?name=User&background=0D8ABC&color=fff"}/>
             <div className="overflow-hidden">
-              <p className="text-sm font-bold truncate">{session?.user?.email?.split('@')[0] || "Mentor"}</p>
+              <p className="text-sm font-bold truncate">{profile?.full_name || session?.user?.email?.split('@')[0] || "Mentor"}</p>
               <p className="text-xs text-on-surface-variant capitalize">{profile?.role || "Curator"}</p>
             </div>
           </div>

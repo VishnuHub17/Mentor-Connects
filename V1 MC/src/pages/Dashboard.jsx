@@ -44,8 +44,8 @@ export default function Dashboard({ profile, session }) {
     fetchDashboardData();
   }, [session]);
 
-  const userName = session?.user?.email?.split('@')[0] || "Mentor";
-  const capitalizedName = userName.charAt(0).toUpperCase() + userName.slice(1);
+  const fallbackName = session?.user?.email?.split('@')[0] || "Mentor";
+  const capitalizedName = profile?.full_name || (fallbackName.charAt(0).toUpperCase() + fallbackName.slice(1));
 
   if (loading) {
     return (
