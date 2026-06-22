@@ -1,0 +1,8 @@
+.env
+.mcp.json
+node_modules
+dist
+.npm-cache*
+.vite-cache
+debug.log
+Out-Null
